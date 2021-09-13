@@ -17,5 +17,22 @@
 package com.filippov.data.validation.tool.model;
 
 public enum DataType {
-    STRING, INTEGER, LONG, DOUBLE, OBJECT, BOOLEAN, INSTANT, LIST
+    STRING,
+    INTEGER,
+    LONG,
+    FLOAT,
+    DOUBLE,
+    BOOLEAN,
+    DATE,
+    DATE_TIME,
+    OBJECT,
+    LIST_OF_STRINGS,
+    LIST_OF_INTEGERS,
+    LIST_OF_LONGS,
+    LIST_OF_FLOATS,
+    LIST_OF_DOUBLES,
+    LIST_OF_BOOLEANS,
+    LIST_OF_DATES,
+    LIST_OF_DATE_TIMES,
+    LIST_OF_OBJECTS;
 }

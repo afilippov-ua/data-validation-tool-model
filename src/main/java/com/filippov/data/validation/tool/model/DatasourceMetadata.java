@@ -16,16 +16,51 @@
 
 package com.filippov.data.validation.tool.model;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-
 import java.util.List;
 
-@Getter
-@Builder
-@RequiredArgsConstructor
 public class DatasourceMetadata {
-    private final List<DatasourceTable> tables;
-    private final List<DatasourceColumn> columns;
+    private List<DatasourceTable> tables;
+    private List<DatasourceColumn> columns;
+
+    public DatasourceMetadata(List<DatasourceTable> tables, List<DatasourceColumn> columns) {
+        this.tables = tables;
+        this.columns = columns;
+    }
+
+    public DatasourceMetadata() {
+    }
+
+    public static DatasourceMetadataBuilder builder() {
+        return new DatasourceMetadataBuilder();
+    }
+
+    public List<DatasourceTable> getTables() {
+        return this.tables;
+    }
+
+    public List<DatasourceColumn> getColumns() {
+        return this.columns;
+    }
+
+    public static class DatasourceMetadataBuilder {
+        private List<DatasourceTable> tables;
+        private List<DatasourceColumn> columns;
+
+        DatasourceMetadataBuilder() {
+        }
+
+        public DatasourceMetadataBuilder tables(List<DatasourceTable> tables) {
+            this.tables = tables;
+            return this;
+        }
+
+        public DatasourceMetadataBuilder columns(List<DatasourceColumn> columns) {
+            this.columns = columns;
+            return this;
+        }
+
+        public DatasourceMetadata build() {
+            return new DatasourceMetadata(tables, columns);
+        }
+    }
 }

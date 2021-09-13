@@ -10,6 +10,6 @@ repositories {
 }
 
 dependencies {
-    implementation('org.projectlombok:lombok:1.18.4')
-    annotationProcessor('org.projectlombok:lombok:1.18.4')
+    implementation('org.springframework:spring-context:5.3.1')
+    implementation('org.springframework:spring-web:5.3.1')
 }
