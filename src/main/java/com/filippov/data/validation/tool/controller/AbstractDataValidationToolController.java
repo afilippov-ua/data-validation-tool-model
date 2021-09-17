@@ -31,4 +31,7 @@ public abstract class AbstractDataValidationToolController {
 
     @GetMapping(path = "/data", produces = MediaType.APPLICATION_JSON_VALUE)
     public abstract ColumnData getData(DatasourceColumn datasourceColumn, int offset, int limit);
+
+    @GetMapping(path = "/size", produces = MediaType.APPLICATION_JSON_VALUE)
+    public abstract int getSize(DatasourceColumn datasourceColumn);
 }
