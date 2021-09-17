@@ -27,7 +27,7 @@ plugins {
 }
 
 group 'com.filippov.data.validation.tool'
-version '1.0.3-SNAPSHOT'
+version '1.0.4-SNAPSHOT'
 
 repositories {
     mavenLocal()

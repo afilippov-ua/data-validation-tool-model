@@ -19,15 +19,15 @@ package com.filippov.data.validation.tool.model;
 import java.util.List;
 
 public class ColumnData {
-    private String keyColumn;
-    private String dataColumn;
+    private DatasourceColumn keyColumn;
+    private DatasourceColumn dataColumn;
     private List<Object> keys;
     private List<Object> values;
 
     public ColumnData() {
     }
 
-    public ColumnData(String keyColumn, String dataColumn, List<Object> keys, List<Object> values) {
+    public ColumnData(DatasourceColumn keyColumn, DatasourceColumn dataColumn, List<Object> keys, List<Object> values) {
         this.keyColumn = keyColumn;
         this.dataColumn = dataColumn;
         this.keys = keys;
@@ -38,19 +38,19 @@ public class ColumnData {
         return new ColumnDataBuilder();
     }
 
-    public String getKeyColumn() {
+    public DatasourceColumn getKeyColumn() {
         return this.keyColumn;
     }
 
-    public void setKeyColumn(String keyColumn) {
+    public void setKeyColumn(DatasourceColumn keyColumn) {
         this.keyColumn = keyColumn;
     }
 
-    public String getDataColumn() {
+    public DatasourceColumn getDataColumn() {
         return this.dataColumn;
     }
 
-    public void setDataColumn(String dataColumn) {
+    public void setDataColumn(DatasourceColumn dataColumn) {
         this.dataColumn = dataColumn;
     }
 
@@ -71,20 +71,20 @@ public class ColumnData {
     }
 
     public static class ColumnDataBuilder {
-        private String keyColumn;
-        private String dataColumn;
+        private DatasourceColumn keyColumn;
+        private DatasourceColumn dataColumn;
         private List<Object> keys;
         private List<Object> values;
 
         ColumnDataBuilder() {
         }
 
-        public ColumnDataBuilder keyColumn(String keyColumn) {
+        public ColumnDataBuilder keyColumn(DatasourceColumn keyColumn) {
             this.keyColumn = keyColumn;
             return this;
         }
 
-        public ColumnDataBuilder dataColumn(String dataColumn) {
+        public ColumnDataBuilder dataColumn(DatasourceColumn dataColumn) {
             this.dataColumn = dataColumn;
             return this;
         }
