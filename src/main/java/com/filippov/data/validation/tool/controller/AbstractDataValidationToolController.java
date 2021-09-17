@@ -21,7 +21,9 @@ import com.filippov.data.validation.tool.model.DatasourceColumn;
 import com.filippov.data.validation.tool.model.DatasourceMetadata;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
+@RequestMapping("dvt")
 public abstract class AbstractDataValidationToolController {
 
     @GetMapping(path = "/metadata", produces = MediaType.APPLICATION_JSON_VALUE)
